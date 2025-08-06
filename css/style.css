@@ -51,7 +51,7 @@ body{
     height: calc(100vh - 80px);
 }
 .logo{
-    background: url(../img/gost.gif);
+    background: url(../img/logo.png);
     width: 50px;
     height: 50px;
     background-position: center;
@@ -96,8 +96,10 @@ body{
 /*main*/
 main{
     background: linear-gradient(to bottom right, #000000, #2c2c2c);
-    height: calc(100vh - 80px);
+    height: 100%;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
 
 }
 #hero_foto{
@@ -112,7 +114,7 @@ main{
     background-position: center;
     background-size: cover;
     border-radius: 15px;
-    margin: 2rem;
+    margin: 1rem;
 }
 .hero h2{
     color: rgb(255, 0, 0);
@@ -130,10 +132,13 @@ main{
     padding: 1rem;
     font-family: "Noto Sans Mono", monospace;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 500;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
+    max-width: 600px;
+    margin: 0 auto;
+
     
 }
 .content p{
@@ -141,6 +146,7 @@ main{
     background-color: rgba(0,0,0,.6);
     border-radius: 0 0 15px 15px;
     padding: 1rem;
+
 }
 
 
@@ -170,24 +176,18 @@ main{
         background-image: none;
         display: flex;
         justify-content: center;
-        width: 100%;
-        gap: 1rem;
-        background-color: rgb(114, 49, 49);
-        margin: 2rem 0;
+        align-items: center;
+
     }
     #hero_foto{
         display: flex;
-        min-width: 600px;
-        max-width: 650;
         padding:  .5rem;
         height: 100%;
         border-radius: 15px;
+        min-width: 600px;
     }
     .content{
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        max-width: 500px;
+        min-width: 300px;
     }
     .content{
         font-size: 1.5rem;
