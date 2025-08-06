@@ -198,7 +198,7 @@ footer{
 .cabecera{
     background-color: #4d0000;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 800px;
     background: url(../img/101010.jpg);
     background-position: center center;
     background-size: cover;
