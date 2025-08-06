@@ -28,8 +28,7 @@ body{
 }
 .header{
     height: 80px;
-     
-     background: linear-gradient(to bottom, #000000, #1b1b1b, #2e2e2e);
+    background: linear-gradient(to bottom, #000000, #1b1b1b, #2e2e2e);
 }
 .header .navbar{
     position: relative;
@@ -52,7 +51,7 @@ body{
     height: calc(100vh - 80px);
 }
 .logo{
-    background: url(/img/logo.png);
+    background: url(../img/gost.gif);
     width: 50px;
     height: 50px;
     background-position: center;
@@ -109,7 +108,7 @@ main{
     height: 400px;
     margin: 0 auto;
     text-align: center;
-    background-image: url(/img/gost.gif);
+    background-image: url(../img/gost.gif);
     background-position: center;
     background-size: cover;
     border-radius: 15px;
