@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+
+/*
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+*/
+
+/*
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    
+}
+body{
+    background-color: antiquewhite;
+}
+.header{
+    height: 80px;
+     
+     background: linear-gradient(to bottom, #000000, #1b1b1b, #2e2e2e);
+}
+.header .navbar{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    margin: 0 auto;
+    width: min(1200px, 100%);
+
+
+}
+.icons{
+    color: white;
+    cursor: pointer;
+}
+.check_menu:checked + .ul_link{
+    height: calc(100vh - 80px);
+}
+.logo{
+    background: url(/img/logo.png);
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+#check_menu{
+    display: none;
+}
+.ul_link{
+    position: absolute;
+    top: 80px;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background: linear-gradient(to bottom right, #000000, #2c2c2c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    transition: .3s;
+    list-style: none;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+
+}
+.link:hover{
+    font-size: 1.5rem;
+    transition: .3s;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+
+}
+/*main*/
+main{
+    background: linear-gradient(to bottom right, #000000, #2c2c2c);
+    height: calc(100vh - 80px);
+    padding-top: 1rem;
+
+}
+#hero_foto{
+    display: none;
+}
+.hero{
+    min-width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(/img/gost.gif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    margin: 2rem;
+}
+.hero h2{
+    color: rgb(255, 0, 0);
+    background-color: rgba(0,0,0,.6);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    border-radius: 15px 15px 0 0;
+}
+.img{
+    display: none;
+}
+.content{
+    padding: 1rem;
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    
+}
+.content p{
+    font-size: 1rem;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 0 0 15px 15px;
+    padding: 1rem;
+}
+
+
+@media (min-width:450px){
+    .labe_menu{
+        display: none;
+    }
+    .ul_link{
+        position: static;
+        width: auto;
+        flex-direction: row;
+        height: auto;
+        gap: 1rem;
+    }
+    .link:hover{
+        font-size: 1.5rem;
+        transition: .3s;
+        padding: 4px;
+        border-radius: 15px;
+        background-color: white;
+        color: black;
+    }
+}
+@media (min-width:900px){
+
+    .hero{
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+        background-color: rgb(114, 49, 49);
+        margin: 2rem 0;
+    }
+    #hero_foto{
+        display: flex;
+        min-width: 600px;
+        max-width: 650;
+        padding:  .5rem;
+        height: 100%;
+        border-radius: 15px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        max-width: 500px;
+    }
+    .content{
+        font-size: 1.5rem;
+    }
+}
