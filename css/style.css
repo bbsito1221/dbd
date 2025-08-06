@@ -28,7 +28,13 @@ body{
 }
 .header{
     height: 80px;
-    background: linear-gradient(to bottom, #000000, #1b1b1b, #2e2e2e);
+     background: linear-gradient(to bottom, 
+    #000000 0%,       /* negro arriba */
+    #1a0000 25%,       /* negro con un leve rojo */
+    #4d0000 50%,       /* rojo sangre oscuro */
+    #1a0000 75%,       /* vuelve al oscuro */
+    #000000 100%       /* negro abajo */
+  );
 }
 .header .navbar{
     position: relative;
@@ -66,7 +72,11 @@ body{
     top: 80px;
     height: calc(100vh - 80px);
     width: 100%;
-    background: linear-gradient(to bottom right, #000000, #2c2c2c);
+      background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +92,7 @@ body{
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
+    transition: .7s;
 
 }
 .link:hover{
@@ -89,13 +100,18 @@ body{
     transition: .3s;
     padding: 4px;
     border-radius: 15px;
-    background-color: white;
+    background-color: rgb(255, 0, 0);
     color: black;
 
 }
 /*main*/
 main{
-    background: linear-gradient(to bottom right, #000000, #2c2c2c);
+  background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
+
     height: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -110,45 +126,74 @@ main{
     height: 400px;
     margin: 0 auto;
     text-align: center;
-    background-image: url(../img/gost.gif);
+    background-image: url(../img/1b4a39c3d24c343f0247362538e3f755.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 15px;
-    margin: 1rem;
+    margin: 6rem 1rem;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow:
+    0 0 10px rgba(128, 0, 0, 0.4),   /* brillo suave rojo oscuro */
+    0 0 20px rgba(255, 0, 0, 0.2),   /* resplandor rojo más fuerte */
+    0 10px 30px rgba(255, 0, 0, 0.1); /* profundidad como sombra larga */
+    transition: box-shadow 0.3s ease;
+}
+.hero:hover {
+  box-shadow:
+    0 0 15px rgba(255, 0, 0, 0.6),
+    0 0 30px rgba(255, 0, 0, 0.4),
+    0 15px 40px rgba(255, 0, 0, 0.2);
+}
+
+main .hero:nth-child(2){
+    background-image: url(../img/dead-by-daylight-video-games-video-game-art-horror-hd-wallpaper-preview.jpg);
 }
 .hero h2{
     color: rgb(255, 0, 0);
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: fit-content;
+    margin: 0 auto;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
     border-radius: 15px 15px 0 0;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 15px;
 }
 .img{
     display: none;
 }
 .content{
-    padding: 1rem;
     font-family: "Noto Sans Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
     max-width: 600px;
     margin: 0 auto;
-
-    
 }
+
 .content p{
     font-size: 1rem;
     background-color: rgba(0,0,0,.6);
-    border-radius: 0 0 15px 15px;
+    border-radius:15px;
     padding: 1rem;
 
 }
-
+footer{
+  background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
+}
 
 @media (min-width:450px){
     .labe_menu{
@@ -166,12 +211,14 @@ main{
         transition: .3s;
         padding: 4px;
         border-radius: 15px;
-        background-color: white;
+        background-color: rgb(255, 0, 0);
         color: black;
     }
 }
 @media (min-width:900px){
-
+    main .hero:nth-child(2){
+        background-image: none;
+    }
     .hero{
         background-image: none;
         display: flex;
@@ -183,8 +230,9 @@ main{
         display: flex;
         padding:  .5rem;
         height: 100%;
+        max-width: 600px;
         border-radius: 15px;
-        min-width: 600px;
+        min-width: 550px;
     }
     .content{
         min-width: 300px;
